@@ -1,0 +1,16 @@
+# Homework 1-5 and 7
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+cvxopt
+jupyter
+# Homework 6
+torch
+torchvision
+tqdm
+# Sudoku project (training needs TensorFlow; run_demo.py only needs the lines below)
+opencv-python
+h5py
+pillow

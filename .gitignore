@@ -1,0 +1,26 @@
+# Datasets are not redistributed here (see data/README.md)
+*.csv
+assets/
+assets.zip
+data/*
+!data/README.md
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# LaTeX build files (the compiled PDFs are kept)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
