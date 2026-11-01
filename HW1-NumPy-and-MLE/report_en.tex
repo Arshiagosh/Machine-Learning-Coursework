@@ -1,0 +1,15 @@
+\input{../tex/preamble}
+\begin{document}
+\summaryheader{Machine Learning, Homework 1}{NumPy Warm-up and Maximum-Likelihood Estimation}{Spring 1404 (2025)}
+
+\textbf{Notebook.} \texttt{numpy\_exercises.ipynb} is a set of NumPy drills that I completed: creating arrays (\texttt{zeros}, \texttt{arange}, \texttt{linspace}, \texttt{eye}, random draws), reshaping, slicing a $5\times5$ matrix to reproduce given sub-matrices, and reductions (sum, standard deviation, column sums).
+
+\textbf{Written part.} Each problem gives a density and $N$ i.i.d.\ samples. I wrote the likelihood, took its logarithm, set the derivative to zero and checked that the stationary point is a maximum.
+\begin{description}
+  \item[Exponential rate.] $f(y;\lambda)=\lambda e^{-\lambda y}$ gives $\ell(\lambda)=N\ln\lambda-\lambda\sum_i y_i$, so $\hat\lambda=N/\sum_{i=1}^N y_i$.
+  \item[Power density on $(0,1)$.] $f(y;a)=a y^{a-1}$ gives $\ell(a)=N\ln a+(a-1)\sum_i\ln y_i$, so $\hat a_{\mathrm{ML}}=-\big(\tfrac1N\sum_i\ln y_i\big)^{-1}$.
+  \item[Gaussian mean with a Gaussian prior.] With $y_n\sim\mathcal N(\mu,1)$ and $\mu\sim\mathcal N(0,\sigma_\mu^2)$, completing the square gives the posterior $\mathcal N(\mu_N,\sigma_N^2)$ with $\sigma_N^2=(N+\sigma_\mu^{-2})^{-1}$ and $\mu_N=\sigma_N^2\sum_n y_n$. The posterior is Gaussian, so the MAP estimate is its mean, $\hat\mu_{\mathrm{MAP}}=\sum_n y_n/(N+\sigma_\mu^{-2})$, which shrinks the sample mean towards the prior mean $0$.
+  \item[Weibull-type density, known shape $\delta$.] $f(x;\beta,\delta)=\beta\delta x^{\delta-1}e^{-\beta x^\delta}$ gives $\hat\beta=n/\sum_i x_i^\delta$.
+  \item[Shifted exponential.] $f(x;\tau)=\tau e^{-\tau(x-3)}$, $x>3$, gives $\hat\tau=n/\sum_i(x_i-3)$. For the sample $3.15, 3.65, 3.10, 3.30$: $\hat\tau=4/1.2\approx3.33$.
+\end{description}
+\end{document}
