@@ -1,0 +1,41 @@
+{
+  "model": "improved_digit_classifier.h5",
+  "photos": [
+    {
+      "image": "synthetic_1.jpg",
+      "clues_recognised": 21,
+      "solved": true,
+      "solution_valid": true,
+      "clues_true": 35,
+      "cells_correct": 67,
+      "clues_missed": 14,
+      "clues_wrong": 0,
+      "false_clues": 0,
+      "solution_agrees_with_all_true_clues": false
+    },
+    {
+      "image": "synthetic_2.jpg",
+      "clues_recognised": 17,
+      "solved": true,
+      "solution_valid": true,
+      "clues_true": 32,
+      "cells_correct": 66,
+      "clues_missed": 15,
+      "clues_wrong": 0,
+      "false_clues": 0,
+      "solution_agrees_with_all_true_clues": false
+    },
+    {
+      "image": "synthetic_3.jpg",
+      "clues_recognised": 27,
+      "solved": true,
+      "solution_valid": true,
+      "clues_true": 28,
+      "cells_correct": 80,
+      "clues_missed": 1,
+      "clues_wrong": 0,
+      "false_clues": 0,
+      "solution_agrees_with_all_true_clues": false
+    }
+  ]
+}
